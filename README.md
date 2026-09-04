@@ -188,4 +188,35 @@ Transaction Completion
 
 # 6. Hardware Connections
 
-<img width="1599" height="899" alt="WhatsApp Image 2026-09-04 at 07 42 27" src="https://github.com/user-attachments/assets/6ec381c6-98e7-486a-85d3-0dabe2b7d04c" />
+
+
+## Servo Motor
+
+| Servo Pin | Arduino |
+|---|---|
+| Signal | D9 |
+| VCC | 5V |
+| GND | GND |
+
+## Buzzer Module
+
+| Buzzer Pin | Arduino |
+|---|---|
+| I/O | D7 |
+| VCC | 5V |
+| GND | GND |
+
+## LED
+
+```text
+Arduino D8
+    |
+    v
+220Ω Resistor
+    |
+    v
+LED
+    |
+    v
+GND
+
