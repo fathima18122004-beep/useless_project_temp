@@ -187,8 +187,5 @@ Transaction Completion
 ---
 
 # 6. Hardware Connections
-<img width="1599" height="899" alt="WhatsApp Image 2026-09-04 at 07 42 27" src="https://github.com/user-attachments/assets/a1269dbe-0a0b-491b-be95-e98d04cce6d4" />
 
-
-       <img width="1599" height="899" alt="WhatsApp Image 2026-09-04 at 07 42 27" src="https://github.com/user-attachments/assets/ec5c5b62-18a7-4756-b521-d974fcc3b759" />
-
+<img width="1599" height="899" alt="WhatsApp Image 2026-09-04 at 07 42 27" src="https://github.com/user-attachments/assets/6ec381c6-98e7-486a-85d3-0dabe2b7d04c" />
