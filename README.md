@@ -55,8 +55,6 @@ The user's money remains unchanged.
 
 **Net Financial Impact: ₹0.00**
 
----
-
 # 1. Project Overview
 
 ## Project Name : **USELESS BANK™ ATM**
@@ -74,8 +72,6 @@ The project combines embedded electronics, mechanical design, software developme
 ## Core Principle
 
 > **Maximum processing. Minimum purpose.**
-
----
 
 # 2. Project Description
 
@@ -102,8 +98,6 @@ During a transaction:
 | Profit Generated | ₹0.00 |
 | New Value Created | ₹0.00 |
 
----
-
 # 3. The Problem
 
 ## A Problem That Does Not Exist
@@ -115,8 +109,6 @@ However, there is no practical need for a system that performs an entire financi
 USELESS BANK™ ATM was created to solve this nonexistent requirement.
 
 The project intentionally questions whether technology always needs to produce useful outcomes.
-
----
 
 # 4. The Solution
 
@@ -132,7 +124,6 @@ The transaction then concludes by returning the same ₹1.
 
 ### Transaction Flow
 
-```text
 User
   │
   ▼
@@ -184,11 +175,7 @@ Transaction Completion
 - Web Serial API
 - Browser Speech Synthesis API
 
----
-
 # 6. Hardware Connections
-
-
 
 ## Servo Motor
 
@@ -208,7 +195,6 @@ Transaction Completion
 
 ## LED
 
-```text
 Arduino D8
     |
     v
@@ -227,8 +213,6 @@ The Arduino communicates with the React application through USB serial communica
 ### Connection
 
 React sends:
-
-```text
 CONNECT
 # 8. Transaction Processing
 
@@ -243,8 +227,6 @@ When the transaction starts:
 7. The Arduino sends a completion signal to the React application.
 8. The React interface displays the final transaction result.
 9. The original ₹1 token is returned.
-
----
 
 # 9. User Interface
 
@@ -266,7 +248,6 @@ The serious financial interface intentionally contrasts with the completely usel
 
 # 10. Financial Outcome
 
-```text
 Amount Submitted     : ₹1.00
 Amount Returned      : ₹1.00
 
@@ -289,8 +270,6 @@ The user's financial position remains exactly the same.
 The project therefore uses hardware, software, mechanical movement, communication and user interaction to accomplish absolutely nothing.
 
 > **It works perfectly. It is completely useless.**
-
----
 
 # 12. Cross-Disciplinary Approach
 
@@ -320,13 +299,10 @@ The system combines physical token interaction with real-time digital feedback.
 
 LED, buzzer and browser voice provide transaction feedback.
 
----
-
 # 13. Implementation Complexity
 
 Although the objective is intentionally useless, the implementation combines several independent systems:
 
-```text
 Physical Token
       +
 Arduino UNO
