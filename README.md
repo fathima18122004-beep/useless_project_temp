@@ -220,3 +220,132 @@ LED
     v
 GND
 
+# 7. Arduino–React Communication
+
+The Arduino communicates with the React application through USB serial communication.
+
+### Connection
+
+React sends:
+
+```text
+CONNECT
+# 8. Transaction Processing
+
+When the transaction starts:
+
+1. The Arduino activates the LED.
+2. The buzzer provides an audio notification.
+3. The servo motor opens the mechanism.
+4. The React interface displays the transaction as processing.
+5. The system remains in the processing state for several seconds.
+6. The servo motor closes the mechanism.
+7. The Arduino sends a completion signal to the React application.
+8. The React interface displays the final transaction result.
+9. The original ₹1 token is returned.
+
+---
+
+# 9. User Interface
+
+The React application is designed as a professional banking terminal.
+
+It provides:
+
+- Hardware connection status
+- Transaction status
+- Processing progress
+- Transaction identifier
+- Financial summary
+- Transaction history
+- Terminal activity
+- Final transaction analysis
+- Audio and visual feedback
+
+The serious financial interface intentionally contrasts with the completely useless financial outcome.
+
+# 10. Financial Outcome
+
+```text
+Amount Submitted     : ₹1.00
+Amount Returned      : ₹1.00
+
+Net Financial Impact : ₹0.00
+Profit Generated     : ₹0.00
+Value Created        : ₹0.00
+Practical Purpose    : None
+# 11. Why Is It Completely Useless?
+
+USELESS BANK™ ATM performs no meaningful financial operation.
+
+The user gives ₹1.
+
+The system processes ₹1.
+
+The system returns ₹1.
+
+The user's financial position remains exactly the same.
+
+The project therefore uses hardware, software, mechanical movement, communication and user interaction to accomplish absolutely nothing.
+
+> **It works perfectly. It is completely useless.**
+
+---
+
+# 12. Cross-Disciplinary Approach
+
+The project combines multiple technical disciplines.
+
+### Embedded Systems
+
+Arduino UNO controls the physical hardware and transaction sequence.
+
+### Mechanical Design
+
+A cardboard ATM enclosure and servo mechanism provide physical movement.
+
+### Software Engineering
+
+React provides the banking interface and manages transaction states.
+
+### Communication
+
+USB Serial and the Web Serial API connect the physical hardware with the web application.
+
+### Human-Computer Interaction
+
+The system combines physical token interaction with real-time digital feedback.
+
+### Audio-Visual Feedback
+
+LED, buzzer and browser voice provide transaction feedback.
+
+---
+
+# 13. Implementation Complexity
+
+Although the objective is intentionally useless, the implementation combines several independent systems:
+
+```text
+Physical Token
+      +
+Arduino UNO
+      +
+Servo Motor
+      +
+LED
+      +
+Buzzer
+      +
+USB Serial
+      +
+Web Serial API
+      +
+React
+      +
+Transaction State Management
+      +
+Audio / Visual Feedback
+
+Photos and videos
+https://drive.google.com/file/d/1C4wK4m3w0oFvjpkJ1NXU5SmclKtaPQRr/view?usp=sharing
