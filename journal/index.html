@@ -1,506 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>USELESS BANK™ — Project Journal</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USELESS BANK — ₹1 IN / ₹1 OUT</title>
+  <meta name="description" content="Project journal of the Useless Bank ATM — a machine that accepts ₹1 and returns the same ₹1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="scanlines"></div>
+  <div class="progress"><span id="progress"></span></div>
 
-    <!-- HERO -->
-    <header class="hero">
+  <header class="hero" id="home">
+    <nav>
+      <a class="brand" href="#home">USELESS<span>BANK</span></a>
+      <span class="project-code">PROJECT / 001</span>
+    </nav>
 
-        <div class="hero-grid"></div>
-
-        <nav class="navbar">
-            <div class="logo">USELESS BANK™</div>
-
-            <div class="nav-status">
-                <span class="status-dot"></span>
-                SYSTEM ONLINE
-            </div>
-        </nav>
-
-        <div class="hero-content">
-
-            <p class="eyebrow">PROJECT JOURNAL · TEAM INCEPTA</p>
-
-            <h1>
-                It works perfectly.
-                <span>It is completely useless.</span>
-            </h1>
-
-            <p class="hero-description">
-                We built an ATM that accepts ₹1, processes it,
-                and gives back the exact same ₹1.
-                No profit. No loss. No purpose.
-            </p>
-
-            <div class="hero-stats">
-
-                <div class="stat">
-                    <strong>₹1</strong>
-                    <span>INPUT</span>
-                </div>
-
-                <div class="stat-arrow">→</div>
-
-                <div class="stat">
-                    <strong>₹1</strong>
-                    <span>OUTPUT</span>
-                </div>
-
-                <div class="stat">
-                    <strong>₹0</strong>
-                    <span>NET IMPACT</span>
-                </div>
-
-            </div>
-
-            <div class="scroll-hint">
-                ↓ SCROLL TO ENTER THE BANK
-            </div>
-
+    <div class="hero-content">
+      <div class="hero-copy reveal">
+        <p class="kicker">A FINANCIAL EXPERIMENT WITH ZERO FINANCIAL BENEFIT</p>
+        <h1>THE ATM THAT<br><span>RETURNS YOUR ₹1.</span></h1>
+        <p class="lead">Insert one rupee. The machine detects it, processes it, and gives the exact same rupee back.</p>
+        <div class="hero-actions">
+          <a class="button" href="#story">EXPLORE THE BUILD ↓</a>
+          <a class="text-link" href="#transaction">TRY THE ATM →</a>
         </div>
+      </div>
 
-    </header>
-
-
-    <!-- INTRO -->
-    <section class="section intro">
-
-        <div class="section-number">01</div>
-
-        <div class="section-content">
-
-            <p class="label">THE IDEA</p>
-
-            <h2>
-                What if we built a bank
-                <em>that did absolutely nothing?</em>
-            </h2>
-
-            <p>
-                Most projects try to solve a real problem.
-                We decided to do something different.
-            </p>
-
-            <p>
-                Our goal was simple: build a functioning ATM
-                that completes an entire banking transaction,
-                while making absolutely no financial difference.
-            </p>
-
-            <div class="quote-box">
-                <span>“</span>
-                Maximum processing.
-                Minimum purpose.
-                <span>”</span>
-            </div>
-
+      <div class="hero-card reveal">
+        <img src="images/final-atm.jpg" alt="Useless Bank cardboard ATM connected to an Arduino and laptop">
+        <div class="photo-caption">
+          <span>FIELD TEST / FINAL SETUP</span>
+          <span>₹1 → ₹1</span>
         </div>
+      </div>
+    </div>
 
+    <div class="hero-stats">
+      <div><strong>₹1</strong><span>INSERTED</span></div>
+      <div><strong>₹1</strong><span>RETURNED</span></div>
+      <div><strong>₹0</strong><span>PROFIT</span></div>
+      <div><strong>100%</strong><span>POINTLESS</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="story">
+      <div class="label">01 / THE IDEA</div>
+      <div class="split">
+        <div>
+          <h2>What happens when an ATM has <em>nothing to give?</em></h2>
+        </div>
+        <div class="copy">
+          <p>Most ATMs are designed around a useful transaction: put something in, get something different out.</p>
+          <p>Our idea flips that logic. The Useless Bank ATM accepts a ₹1 coin and returns that same ₹1 coin.</p>
+          <div class="flow"><span>₹1</span><b>→</b><span>ATM</span><b>→</b><span>₹1</span></div>
+          <p class="mono">RESULT: THE USER ENDS THE TRANSACTION WITH EXACTLY WHAT THEY STARTED WITH.</p>
+        </div>
+      </div>
     </section>
 
-
-    <!-- STORY -->
-    <section class="section dark-section">
-
-        <div class="section-number">02</div>
-
-        <div class="section-content">
-
-            <p class="label">BEFORE THE CODE</p>
-
-            <h2>
-                First, there was
-                <em>cardboard.</em>
-            </h2>
-
-            <p>
-                Before React, Arduino and serial communication,
-                we had cardboard, glue, tape, measurements
-                and one very important question:
-            </p>
-
-            <div class="big-question">
-                “Will the ₹1 token actually move through this thing?”
-            </div>
-
-            <p>
-                We designed and built the physical ATM enclosure
-                by hand. We measured the structure, cut cardboard,
-                joined the pieces with glue and tape, and created
-                a mechanism through which the token could enter,
-                move through the machine and come back out.
-            </p>
-
-            <div class="process">
-
-                <div>MEASURE</div>
-                <span>→</span>
-                <div>CUT</div>
-                <span>→</span>
-                <div>JOIN</div>
-                <span>→</span>
-                <div>TEST</div>
-
-            </div>
-
+    <section class="section dark" id="setup">
+      <div class="label">02 / THE ACTUAL BUILD</div>
+      <div class="build-layout">
+        <div class="image-frame">
+          <img src="images/final-atm.jpg" alt="Actual Useless Bank ATM project setup">
+          <p>OUR CURRENT PROTOTYPE — CARDBOARD ATM + ARDUINO + LAPTOP</p>
         </div>
-
-    </section>
-
-
-    <!-- BUILD -->
-    <section class="section">
-
-        <div class="section-number">03</div>
-
-        <div class="section-content">
-
-            <p class="label">THE PHYSICAL BUILD</p>
-
-            <h2>
-                Building the machine
-                <em>by hand.</em>
-            </h2>
-
-            <p>
-                The physical construction became a major part of
-                our project. Every measurement mattered because
-                the token had to travel through the mechanism
-                correctly.
-            </p>
-
-            <div class="photo-placeholder">
-
-                <div class="placeholder-icon">+</div>
-
-                <p>
-                    ADD YOUR CARDBOARD BUILD PHOTOS HERE
-                </p>
-
-                <small>
-                    Put your images inside journal/assets/
-                </small>
-
-            </div>
-
+        <div class="copy">
+          <h2>Not a render.<br><em>This is the machine.</em></h2>
+          <p>The prototype uses a handmade cardboard ATM body, a visible coin-entry area, indicator/button elements, an Arduino setup and a laptop connection for the electronics and interface.</p>
+          <div class="feature-list">
+            <div><span>01</span><strong>ATM BODY</strong><small>Hand-built cardboard enclosure.</small></div>
+            <div><span>02</span><strong>COIN PATH</strong><small>Entry and return openings for the ₹1 coin.</small></div>
+            <div><span>03</span><strong>ARDUINO</strong><small>Controls the electronic side of the prototype.</small></div>
+            <div><span>04</span><strong>LAPTOP</strong><small>USB-connected during development and testing.</small></div>
+          </div>
         </div>
-
+      </div>
     </section>
 
+    <section class="section" id="working">
+      <div class="label">03 / HOW IT WORKS</div>
+      <h2 class="wide-title">The world's least profitable transaction.</h2>
+      <div class="steps">
+        <article><b>01</b><h3>INSERT ₹1</h3><p>Place one ₹1 coin into the marked entry slot.</p></article>
+        <article><b>02</b><h3>DETECT</h3><p>The sensing system recognises the coin entering the mechanism.</p></article>
+        <article><b>03</b><h3>PROCESS</h3><p>The Arduino handles the programmed response and controls the mechanism.</p></article>
+        <article><b>04</b><h3>RETURN</h3><p>The mechanism sends the same coin toward the return opening.</p></article>
+        <article><b>05</b><h3>COMPLETE</h3><p>The transaction ends with ₹1 returned to the user.</p></article>
+      </div>
+    </section>
 
-    <!-- HARDWARE -->
-    <section class="section dark-section">
-
-        <div class="section-number">04</div>
-
-        <div class="section-content">
-
-            <p class="label">HARDWARE</p>
-
-            <h2>
-                Making the cardboard
-                <em>come alive.</em>
-            </h2>
-
-            <p>
-                The physical ATM needed a way to react to the
-                transaction. That is where the Arduino came in.
-            </p>
-
-            <div class="hardware-grid">
-
-                <div class="hardware-card">
-                    <strong>ARDUINO UNO</strong>
-                    <span>Controller</span>
-                </div>
-
-                <div class="hardware-card">
-                    <strong>SG90 SERVO</strong>
-                    <span>Mechanical movement</span>
-                </div>
-
-                <div class="hardware-card">
-                    <strong>LED</strong>
-                    <span>Visual feedback</span>
-                </div>
-
-                <div class="hardware-card">
-                    <strong>BUZZER</strong>
-                    <span>Audio feedback</span>
-                </div>
-
-            </div>
-
+    <section class="section dark" id="electronics">
+      <div class="label">04 / ELECTRONICS</div>
+      <div class="split electronics">
+        <div>
+          <h2>Arduino is the brain.<br><em>The laptop is the partner.</em></h2>
+          <p class="copy">During development, the Arduino is connected to the laptop using USB. The laptop is used for programming/testing, while the Arduino interfaces with the physical components.</p>
         </div>
-
-    </section>
-
-
-    <!-- SOFTWARE -->
-    <section class="section">
-
-        <div class="section-number">05</div>
-
-        <div class="section-content">
-
-            <p class="label">SOFTWARE</p>
-
-            <h2>
-                The useless bank
-                <em>needed serious software.</em>
-            </h2>
-
-            <p>
-                The front end was built using React and JavaScript.
-                We created a banking-style interface that displays
-                transaction information, processing status,
-                hardware connection and transaction history.
-            </p>
-
-            <div class="tech-stack">
-
-                <span>React</span>
-                <span>JavaScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Vite</span>
-                <span>Web Serial API</span>
-                <span>Arduino</span>
-
-            </div>
-
+        <div class="diagram">
+          <div class="node laptop">LAPTOP</div>
+          <div class="line"></div>
+          <div class="node arduino">ARDUINO</div>
+          <div class="branches">
+            <span>COIN SENSOR</span>
+            <span>SERVO / MECHANISM</span>
+            <span>LED / BUTTON</span>
+            <span>OTHER OUTPUTS</span>
+          </div>
         </div>
-
+      </div>
     </section>
 
+    <section class="section" id="journal">
+      <div class="label">05 / BUILD JOURNAL</div>
+      <div class="journal-intro">
+        <h2>From cardboard to a working idea.</h2>
+        <p>Use the video below as the first entry in the build story. Add more photos and short clips here as the project evolves.</p>
+      </div>
 
-    <!-- CONNECTION -->
-    <section class="section dark-section">
-
-        <div class="section-number">06</div>
-
-        <div class="section-content">
-
-            <p class="label">THE CONNECTION</p>
-
-            <h2>
-                Arduino
-                <em>meets React.</em>
-            </h2>
-
-            <p>
-                The Arduino and the browser communicate through
-                USB serial communication.
-            </p>
-
-            <div class="flow">
-
-                <div class="flow-node">REACT</div>
-
-                <div class="flow-line">→</div>
-
-                <div class="flow-node">USB SERIAL</div>
-
-                <div class="flow-line">→</div>
-
-                <div class="flow-node">ARDUINO</div>
-
-                <div class="flow-line">→</div>
-
-                <div class="flow-node">SERVO + LED + BUZZER</div>
-
-            </div>
-
-            <p class="small-note">
-                The browser becomes the banking interface.
-                The Arduino becomes the physical machine.
-            </p>
-
+      <div class="video-card">
+        <video controls playsinline preload="metadata" poster="images/final-atm.jpg">
+          <source src="videos/build-diary.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-caption">
+          <div><span>BUILD DIARY / VIDEO 01</span><strong>Working session & project documentation</strong></div>
+          <span class="mono">26 SEC</span>
         </div>
+      </div>
 
+      <div class="timeline">
+        <div><span>01</span><div><strong>IDEA</strong><p>Decide on the ₹1 in → ₹1 out concept.</p></div></div>
+        <div><span>02</span><div><strong>BODY</strong><p>Build the ATM enclosure and mark the coin-entry and return areas.</p></div></div>
+        <div><span>03</span><div><strong>ELECTRONICS</strong><p>Connect the Arduino and the physical components.</p></div></div>
+        <div><span>04</span><div><strong>TEST</strong><p>Run the coin detection and return sequence.</p></div></div>
+        <div><span>05</span><div><strong>ITERATE</strong><p>Fix mechanical/electronic issues and repeat the test.</p></div></div>
+      </div>
     </section>
 
-
-    <!-- TRANSACTION -->
-    <section class="section transaction-section">
-
-        <div class="section-number">07</div>
-
-        <div class="section-content">
-
-            <p class="label">THE MOMENT</p>
-
-            <h2>
-                The world's most
-                <em>unnecessary transaction.</em>
-            </h2>
-
-            <div class="transaction-card">
-
-                <div class="transaction-row">
-                    <span>INPUT</span>
-                    <strong>₹1.00</strong>
-                </div>
-
-                <div class="transaction-row">
-                    <span>PROCESSING</span>
-                    <strong>COMPLETE</strong>
-                </div>
-
-                <div class="transaction-row">
-                    <span>OUTPUT</span>
-                    <strong>₹1.00</strong>
-                </div>
-
-                <div class="transaction-row highlight">
-                    <span>NET FINANCIAL IMPACT</span>
-                    <strong>₹0.00</strong>
-                </div>
-
-            </div>
-
-            <div class="useless-result">
-                TRANSACTION SUCCESSFUL.<br>
-                NOTHING CHANGED.
-            </div>
-
+    <section class="section dark" id="problems">
+      <div class="label">06 / THE REAL PART OF BUILDING</div>
+      <div class="split">
+        <div><h2>Things will go wrong.<br><em>Keep them in the journal.</em></h2></div>
+        <div class="copy">
+          <p>This section is intentionally prepared for the actual problems you encounter while testing the ATM.</p>
+          <div class="problem"><span>PROBLEM 01</span><strong>COIN GETS STUCK</strong><p>Write what happened, what you changed, and whether the next test worked.</p></div>
+          <div class="problem"><span>PROBLEM 02</span><strong>SENSOR DOESN'T DETECT</strong><p>Document the wiring, position or code change you made.</p></div>
+          <div class="problem"><span>PROBLEM 03</span><strong>RETURN MECHANISM NEEDS ADJUSTMENT</strong><p>Document the mechanical change and the final result.</p></div>
         </div>
-
+      </div>
     </section>
 
+    <section class="section" id="transaction">
+      <div class="label">07 / THE DIGITAL USELESS ATM</div>
+      <div class="transaction-head">
+        <h2>Try it yourself.</h2>
+        <p>Click the button. Experience the most unnecessary transaction ever.</p>
+      </div>
 
-    <!-- LEARNINGS -->
-    <section class="section">
-
-        <div class="section-number">08</div>
-
-        <div class="section-content">
-
-            <p class="label">WHAT WE LEARNED</p>
-
-            <h2>
-                A useless project
-                <em>taught us useful things.</em>
-            </h2>
-
-            <div class="learning-grid">
-
-                <div>
-                    <span>01</span>
-                    <h3>Hardware matters.</h3>
-                    <p>
-                        A software idea becomes very different
-                        when a physical object has to actually move.
-                    </p>
-                </div>
-
-                <div>
-                    <span>02</span>
-                    <h3>Small measurements matter.</h3>
-                    <p>
-                        The physical mechanism depends on accurate
-                        cutting, positioning and alignment.
-                    </p>
-                </div>
-
-                <div>
-                    <span>03</span>
-                    <h3>Communication is a system.</h3>
-                    <p>
-                        Connecting a browser to an Arduino required
-                        understanding the complete data flow.
-                    </p>
-                </div>
-
-                <div>
-                    <span>04</span>
-                    <h3>Projects are iterative.</h3>
-                    <p>
-                        Building something from scratch means
-                        testing, changing and testing again.
-                    </p>
-                </div>
-
-            </div>
-
+      <div class="atm">
+        <div class="atm-top"><span>USELESS BANK</span><span>ATM-001</span></div>
+        <div class="screen">
+          <p id="screenText">READY</p>
+          <strong id="screenAmount">₹1.00</strong>
+          <small id="screenSub">NOTHING TO GAIN. NOTHING TO LOSE.</small>
         </div>
+        <button id="coinButton">INSERT ₹1 COIN</button>
+        <div class="atm-status" id="atmStatus">STATUS: WAITING</div>
+      </div>
 
+      <div class="receipt" id="receipt">
+        <div class="receipt-title">USELESS BANK</div>
+        <hr>
+        <p>TRANSACTION: UB-001</p>
+        <p>AMOUNT IN: ₹1.00</p>
+        <p>AMOUNT OUT: ₹1.00</p>
+        <p>PROFIT: ₹0.00</p>
+        <hr>
+        <strong>YOU ARE EXACTLY AS RICH AS BEFORE.</strong>
+      </div>
     </section>
 
-
-    <!-- TEAM -->
-    <section class="section dark-section">
-
-        <div class="section-number">09</div>
-
-        <div class="section-content">
-
-            <p class="label">TEAM INCEPTA</p>
-
-            <h2>
-                Two people.
-                <em>One useless bank.</em>
-            </h2>
-
-            <div class="team-grid">
-
-                <div class="team-card">
-                    <div class="team-number">01</div>
-                    <h3>Jeniffer Jerald J N</h3>
-                    <p>LBSITW · Team Lead</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-number">02</div>
-                    <h3>Fathima S</h3>
-                    <p>LBSITW · Team Member</p>
-                </div>
-
-            </div>
-
-            <p class="team-note">
-                This project brought together physical construction,
-                embedded systems, software development, UI design
-                and a slightly questionable understanding of banking.
-            </p>
-
+    <section class="section conclusion">
+      <div class="label">08 / FINAL RESULT</div>
+      <div class="conclusion-box">
+        <p class="big-quote">“The machine does exactly what it was designed to do.”</p>
+        <div class="result-grid">
+          <div><span>INSERTED</span><strong>₹1</strong></div>
+          <div><span>RETURNED</span><strong>₹1</strong></div>
+          <div><span>GAIN</span><strong>₹0</strong></div>
         </div>
-
+        <h2>Nothing gained.<br>Nothing lost.<br><em>Everything built.</em></h2>
+      </div>
     </section>
+  </main>
 
-
-    <!-- FINAL -->
-    <section class="final-section">
-
-        <div class="final-grid"></div>
-
-        <p class="label">USELESS BANK™</p>
-
-        <h2>
-            ₹1 went in.<br>
-            ₹1 came back.
-        </h2>
-
-        <p>
-            And somehow, we built an entire system to make that happen.
-        </p>
-
-        <div class="final-line"></div>
-
-        <p class="footer-text">
-            TEAM INCEPTA · LBS INSTITUTE OF TECHNOLOGY FOR WOMEN
-        </p>
-
-    </section>
-
-
+  <footer>
+    <div><strong>USELESS BANK</strong><span>PROJECT JOURNAL / ₹1 IN → ₹1 OUT</span></div>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
