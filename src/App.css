@@ -2,8 +2,16 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
   background: #05070b;
   color: white;
@@ -16,24 +24,20 @@ button {
 }
 
 .app {
+  width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
   background:
     radial-gradient(circle at top, #10202d, #05070b 60%);
 }
 
 .bank {
   width: 100%;
-  max-width: 1000px;
-  min-height: 700px;
+  min-height: 100vh;
   background: #0b1017;
-  border: 1px solid #1e3445;
-  border-radius: 20px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 0 50px rgba(0, 200, 255, 0.08);
+  box-shadow: none;
 }
 
 header {
@@ -75,7 +79,7 @@ header {
 }
 
 .screen {
-  min-height: 570px;
+  min-height: calc(100vh - 80px);
   padding: 70px 30px;
   text-align: center;
 }
@@ -250,7 +254,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-
   header {
     flex-wrap: wrap;
   }
@@ -269,5 +272,9 @@ footer {
 
   h1 {
     font-size: 36px;
+  }
+
+  .screen {
+    padding: 50px 20px;
   }
 }

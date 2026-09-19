@@ -92,7 +92,6 @@ function App() {
       }
 
       reader.releaseLock();
-
     } catch (error) {
       console.error("Arduino connection failed:", error);
       alert("Could not connect to Arduino.");
@@ -101,13 +100,10 @@ function App() {
 
   return (
     <div className="app">
-
       <div className="bank">
 
         {/* HEADER */}
-
         <header>
-
           <div className="logo">
             🏦 USELESS <span>BANK™</span>
           </div>
@@ -124,16 +120,11 @@ function App() {
               ? "🟢 ARDUINO CONNECTED"
               : "🔌 CONNECT ARDUINO"}
           </button>
-
         </header>
 
-
         {/* HOME */}
-
         {screen === "home" && (
-
           <main className="screen">
-
             <div className="icon">
               🏦
             </div>
@@ -159,18 +150,12 @@ function App() {
             <p className="instruction">
               Or press the physical START button on the ATM.
             </p>
-
           </main>
-
         )}
 
-
         {/* PROCESSING */}
-
         {screen === "processing" && (
-
           <main className="screen">
-
             <div className="icon">
               💳
             </div>
@@ -189,14 +174,12 @@ function App() {
             </p>
 
             <div className="progress">
-
               <div
                 className="bar"
                 style={{
-                  width: `${progress}%`
+                  width: `${progress}%`,
                 }}
               />
-
             </div>
 
             <p>
@@ -210,20 +193,16 @@ function App() {
               <br />
               &gt; PURPOSE = NONE
             </div>
-
           </main>
-
         )}
 
-
         {/* RESULT */}
-
         {screen === "result" && (
-
           <main className="screen">
-
-            <div className="icon">
-              😂
+            <div className="icon-section">
+              <div className="icon">
+                😂
+              </div>
             </div>
 
             <h2 className="success">
@@ -235,9 +214,7 @@ function App() {
               transaction is complete.
             </p>
 
-
             <div className="stats">
-
               <div className="card">
                 <small>RECEIVED</small>
                 <strong>₹1</strong>
@@ -257,18 +234,14 @@ function App() {
                 <small>PURPOSE</small>
                 <strong>NONE</strong>
               </div>
-
             </div>
 
-
             <div className="analytics">
-
               <h3>
                 USELESSNESS ANALYTICS
               </h3>
 
               <div className="analytics-grid">
-
                 <div>
                   <span>TRANSACTIONS</span>
                   <strong>{transactions}</strong>
@@ -276,9 +249,7 @@ function App() {
 
                 <div>
                   <span>MONEY PROCESSED</span>
-                  <strong>
-                    ₹{transactions}
-                  </strong>
+                  <strong>₹{transactions}</strong>
                 </div>
 
                 <div>
@@ -300,11 +271,8 @@ function App() {
                   <span>ACTUAL PURPOSE</span>
                   <strong>NONE</strong>
                 </div>
-
               </div>
-
             </div>
-
 
             <p className="warning">
               ⚠ USELESSNESS SCORE: 99.99%
@@ -315,18 +283,14 @@ function App() {
             >
               DO IT AGAIN 🤦
             </button>
-
           </main>
-
         )}
-
 
         <footer>
           USELESS BANK™ • Securely processing absolutely nothing
         </footer>
 
       </div>
-
     </div>
   );
 }
