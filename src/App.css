@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #05070b;
+  color: white;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top, #10202d, #05070b 60%);
+}
+
+.bank {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 700px;
+  background: #0b1017;
+  border: 1px solid #1e3445;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 200, 255, 0.08);
+}
+
+header {
+  min-height: 80px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #1d2b35;
+  background: #0c141c;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  flex: 1;
+}
+
+.logo span {
+  color: #25d9ff;
+}
+
+.status {
+  font-size: 12px;
+  color: #55e6a5;
+}
+
+.connect-button {
+  background: #13232d;
+  color: #72dcff;
+  border: 1px solid #28566a;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.connect-button:hover {
+  background: #1b3543;
+}
+
+.screen {
+  min-height: 570px;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.subtitle {
+  color: #8495a3;
+  max-width: 600px;
+  margin: 15px auto 30px;
+  line-height: 1.6;
+}
+
+button:not(.connect-button) {
+  background: #22d3ee;
+  color: #001014;
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+button:not(.connect-button):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+}
+
+.warning-box {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 18px;
+  border: 1px solid #594c1e;
+  background: #19160a;
+  border-radius: 10px;
+  color: #ffd76a;
+  line-height: 1.7;
+}
+
+.instruction {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #63717c;
+}
+
+.money {
+  font-size: 55px;
+  font-weight: 800;
+  margin: 20px;
+}
+
+.progress {
+  max-width: 600px;
+  height: 10px;
+  margin: 30px auto 10px;
+  background: #17232c;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: #22d3ee;
+  transition: width 0.5s ease;
+}
+
+.fake-terminal {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: left;
+  background: #05090d;
+  border: 1px solid #1b303c;
+  border-radius: 8px;
+  color: #54e7a0;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.success {
+  color: #55e6a5;
+}
+
+.stats {
+  max-width: 700px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.card {
+  padding: 20px 10px;
+  background: #101820;
+  border: 1px solid #213340;
+  border-radius: 10px;
+}
+
+.card small {
+  display: block;
+  color: #748591;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  font-size: 22px;
+}
+
+.analytics {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #0a1117;
+  border: 1px solid #1d303c;
+  border-radius: 12px;
+}
+
+.analytics h3 {
+  color: #72dcff;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.analytics-grid div {
+  padding: 15px;
+  background: #0f1820;
+  border-radius: 8px;
+}
+
+.analytics-grid span {
+  display: block;
+  color: #687985;
+  font-size: 9px;
+  margin-bottom: 8px;
+}
+
+.analytics-grid strong {
+  font-size: 18px;
+}
+
+.warning {
+  color: #ffd76a;
+  font-weight: bold;
+  margin: 25px;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  border-top: 1px solid #1d2b35;
+  color: #50616c;
+  font-size: 11px;
+}
+
+@media (max-width: 700px) {
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .status {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
